@@ -29,10 +29,10 @@ a.navbar-brand{
 }
 .ilus-about{
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 .ilus-about img{
-    width: 600px;
+    width: 450px;
 }
 .txt-about{
     display: flex;
@@ -83,4 +83,48 @@ footer h3{
     font-size: 18px;
     color: white;
    
+}
+
+/* laptop */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /*  */
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .txt-about h1,.txt-fitur h1{
+        font-size: 38px;
+    }
+    .txt-about p{
+        font-size: 16px;
+    }
+    .ilus-about img{
+        width: 400px;
+    }
+    .card{
+       margin-top: 30px;   
+    }
+}
+
+/* hp */
+@media (min-width: 320px) and (max-width: 767px) {
+    .txt-about h1,.txt-fitur h1{
+        font-size: 24px;
+    }
+    .txt-about h1{
+        text-align: center;
+    }
+    .txt-about p{
+        font-size: 14px;
+        text-align: center;
+    }
+    .ilus-about img{
+        display: none;
+    }
+    .card{
+       margin-bottom: 30px;   
+    }
+    footer h3{
+        font-size: 14px;
+    }
 }
