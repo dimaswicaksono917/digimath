@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/71896dbea6.js" crossorigin="anonymous"></script>
     <title>Digimath - Bangun Datar</title>
 </head>
 
@@ -29,7 +31,7 @@
                 <div class="navbar-nav">
                     <a class="nav-link" aria-current="page" href="index.html">Back to Home</a>
                 </div>
-        </div>
+            </div>
     </nav>
     <!-- end navbar -->
     <!-- start banner -->
@@ -46,7 +48,113 @@
 
     <!-- start section -->
     <section class="half-section">
-        <h1>hello world</h1>
+        <aside>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-2">
+                        <div class="icon-side">
+                            <a class="tablinks">
+                                <div class="sidebar active" onclick="openMenu(event, 'persegi')">
+                                    <img class="gambar-icon" src="assets/bangun-datar/square.png"
+                                        alt="" />Persegi
+                                </div>
+                            </a>
+                            <a class="tablinks">
+                                <div class="sidebar" onclick="openMenu(event, 'lingkaran')">
+                                    <img class="gambar-icon" src="assets/bangun-datar/circle.png"
+                                        alt="" />Lingkaran
+                                </div>
+                            </a>
+                            <a class="tablinks">
+                                <div class="sidebar" onclick="openMenu(event, 'Segitiga')">
+                                    <img class="gambar-icon" src="assets/bangun-datar/triangle.png"
+                                        alt="" />Segitiga
+                                </div>
+                            </a>
+                            <a class="tablinks">
+                                <div class="sidebar" onclick="openMenu(event, 'jajar-genjang')">
+                                    <img class="gambar-icon" src="assets/bangun-datar/rhombus.png"
+                                        alt="" />Jajar Genjang
+                                </div>
+                            </a>
+                            <a class="tablinks">
+                                <div class="sidebar" onclick="openMenu(event, 'trapesium')">
+                                    <img class="gambar-icon" src="assets/bangun-datar/trapezium.png"
+                                        alt="" />Trapesium
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-9">
+
+                        <div class="bangun-datar">
+                            <!-- persegi -->
+                            <div id="persegi" class="tabcontent active">
+                                <div class="row">
+                                    <div class="col-6 text-center">
+                                        <h3>Luas Persegi</h3>
+                                        <center>
+                                            <img src="assets/bangun-datar/square.png" alt="" srcset="">
+                                        </center>
+                                        <p class="mt-2">Rumus Luas Persegi adalah : sisi x sisi</p>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control"
+                                                placeholder="Masukan Sisi">
+                                            <button class="btn btn-primary" type="button"
+                                                id="button-addon2">Hitung</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <h3>Keliling Persegi</h3>
+                                        <center>
+                                            <img src="assets/bangun-datar/square.png" alt="" srcset="">
+                                        </center>
+                                        <p class="mt-2">Rumus keliling Persegi adalah : 4 x sisi</p>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control input-rumus"
+                                                placeholder="Masukan Sisi">
+                                            <button class="btn btn-primary" type="button"
+                                                id="button-addon2">Hitung</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- lingkaran -->
+                            <div id="lingkaran" class="tabcontent">
+                                <div class="row">
+                                    <div class="col-6 text-center">
+                                        <h3>Luas Lingkaran</h3>
+                                        <center>
+                                            <img src="assets/bangun-datar/circle.png" alt="" srcset="">
+                                        </center>
+                                        <p class="mt-2">Rumus Luas Persegi adalah :  π × r × r</p>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control"
+                                                placeholder="Masukan Sisi">
+                                            <button class="btn btn-primary" type="button"
+                                                id="button-addon2">Hitung</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <h3>Keliling Lingkaran</h3>
+                                        <center>
+                                            <img src="assets/bangun-datar/circle.png" alt="" srcset="">
+                                        </center>
+                                        <p class="mt-2">Rumus keliling Persegi adalah : 2 x π x r</p>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control input-rumus"
+                                                placeholder="Masukan Sisi">
+                                            <button class="btn btn-primary" type="button"
+                                                id="button-addon2">Hitung</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
     </section>
     <!-- end section -->
 
@@ -59,7 +167,10 @@
         </footer>
     </section>
     <!-- end footer -->
+    <script src="script.js"></script>
 
+    <!-- php -->
+    
 </body>
 
 </html>
