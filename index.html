@@ -1,1 +1,149 @@
-<h1>hello world</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/logo-fav.png" type="image/x-icon">
+    <!-- my css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <title>Digimath - Beranda</title>
+</head>
+
+<body>
+    <!-- start navbar -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo.png" alt="Logo" class="d-inline-block align-text-center me-2">Digimath
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="#home">Home</a>
+                    <a class="nav-link" href="#tentang">Tentang</a>
+                    <a class="nav-link" href="#fitur">Fitur</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+    <!-- start banner -->
+    <section id="home">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/banner.png" class="d-block w-100" alt="banner">
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#FF9601" fill-opacity="1"
+                    d="M0,32L48,74.7C96,117,192,203,288,197.3C384,192,480,96,576,58.7C672,21,768,43,864,90.7C960,139,1056,213,1152,224C1248,235,1344,181,1392,154.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+    <!-- end banner -->
+    <!-- start about section -->
+    <section id="tentang">
+        <div class="container">
+            <div class="row">
+                <div class="txt-about col-5">
+                    <h1>Tentang Digimath</h1>
+                    <p>Digimath adalah aplikasi berbasis web yang hadir untuk membantu Anda dengan soal perhitungan
+                        dengan berbagai rumus yang mungkin anda butuhkan </p>
+                </div>
+                <div class="ilus-about col-6">
+                    <img src="assets/ilus-1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end about section -->
+    <!-- start fitur section -->
+    <section id="fitur" class="half-section">
+        <div class="txt-fitur col-12 mb-5 text-center">
+            <h1>Fitur</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!-- bangun datar -->
+                <div class="col-3">
+                    <div class="card shadow-sm bg-warning p-4">
+                        <center>
+                            <img src="assets/bangun-datar.png" class="card-img-top" alt="...">
+                        </center>
+                        <h5 class="text-center mt-2">Bangun Datar</h5>
+                        <div class="card-body">
+                            <p class="card-text">Bangun datar adalah bangun yang memiliki permukaan datar dan memiliki
+                                dua dimensi.</p>
+                            <a href="#" class="btn btn-primary d-flex justify-content-center">Mulai !</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- bangun ruang -->
+                <div class="col-3">
+                    <div class="card shadow-sm bg-warning p-4">
+                        <center>
+                            <img src="assets/bangun-ruang.png" class="card-img-top" alt="...">
+                        </center>
+                        <h5 class="text-center mt-2">Bangun Ruang</h5>
+                        <div class="card-body">
+                            <p class="card-text">Bangun ruang adalah sebuah bangun 3 dimensi yang memiliki volume di
+                                dalamnya.</p>
+                            <a href="#" class="btn btn-primary d-flex justify-content-center">Mulai !</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- kalkulator -->
+                <div class="col-3">
+                    <div class="card shadow-sm bg-warning p-4">
+                        <center>
+                            <img src="assets/kalkulator.png" class="card-img-top" alt="...">
+                        </center>
+                        <h5 class="text-center mt-2">Kalkulator</h5>
+                        <div class="card-body">
+                            <p class="card-text">kalkulator adalah alat hitung sederhana seperti penjumlahan,
+                                pengurangan, perkalian pembagian</p>
+                            <a href="#" class="btn btn-primary d-flex justify-content-center">Mulai !</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Index masa tubuh -->
+                <div class="col-3">
+                    <div class="card shadow-sm bg-warning p-4">
+                        <center>
+                            <img src="assets/imt.png" class="card-img-top" alt="...">
+                        </center>
+                        <h5 class="text-center mt-2">IMT</h5>
+                        <div class="card-body">
+                            <p class="card-text">IMT adalah ukuran yang digunakan untuk mengetahui gizi dari
+                                perbandingan berat tinggi.</p>
+                            <a href="#" class="btn btn-primary d-flex justify-content-center">Mulai !</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end fitur section -->
+    <!-- start footer -->
+    <section class="">
+        <footer class="">
+            <div class="col-12">
+                <h3>© copyright by digimagas</h3>
+            </div>
+        </footer>
+    </section>
+    <!-- end footer -->
+
+</body>
+
+</html>
