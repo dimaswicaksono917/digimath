@@ -46,8 +46,9 @@
     </section>
     <!-- end banner -->
 
+
     <!-- start section -->
-    <section class="half-section">
+    <section class="half-section bangun-datar">
         <aside>
             <div class="container-fluid">
                 <div class="row">
@@ -55,98 +56,208 @@
                         <div class="icon-side">
                             <a class="tablinks">
                                 <div class="sidebar active" onclick="openMenu(event, 'persegi')">
-                                    <img class="gambar-icon" src="assets/bangun-datar/square.png"
-                                        alt="" />Persegi
+                                    <img class="gambar-icon" src="assets/bangun-datar/square.png" alt="" />Persegi
+                                </div>
+                            </a>
+                            <a class="tablinks">
+                                <div class="sidebar" onclick="openMenu(event, 'persegiPanjang')">
+                                    <img class="gambar-icon" src="assets/bangun-datar/persegipanjang.png" alt="" />P
+                                    Panjang
                                 </div>
                             </a>
                             <a class="tablinks">
                                 <div class="sidebar" onclick="openMenu(event, 'lingkaran')">
-                                    <img class="gambar-icon" src="assets/bangun-datar/circle.png"
-                                        alt="" />Lingkaran
+                                    <img class="gambar-icon" src="assets/bangun-datar/circle.png" alt="" />Lingkaran
                                 </div>
                             </a>
                             <a class="tablinks">
                                 <div class="sidebar" onclick="openMenu(event, 'Segitiga')">
-                                    <img class="gambar-icon" src="assets/bangun-datar/triangle.png"
-                                        alt="" />Segitiga
+                                    <img class="gambar-icon" src="assets/bangun-datar/triangle.png" alt="" />Segitiga
                                 </div>
                             </a>
                             <a class="tablinks">
                                 <div class="sidebar" onclick="openMenu(event, 'jajar-genjang')">
-                                    <img class="gambar-icon" src="assets/bangun-datar/rhombus.png"
-                                        alt="" />Jajar Genjang
-                                </div>
-                            </a>
-                            <a class="tablinks">
-                                <div class="sidebar" onclick="openMenu(event, 'trapesium')">
-                                    <img class="gambar-icon" src="assets/bangun-datar/trapezium.png"
-                                        alt="" />Trapesium
+                                    <img class="gambar-icon" src="assets/bangun-datar/rhombus.png" alt="" />Jajar
+                                    Genjang
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="col-9">
+                    <div class="col-12 col-md-12 col-lg-9">
 
                         <div class="bangun-datar">
                             <!-- persegi -->
                             <div id="persegi" class="tabcontent active">
                                 <div class="row">
-                                    <div class="col-6 text-center">
+                                    <div class="col-12 col-md-12 col-lg-6 text-center">
                                         <h3>Luas Persegi</h3>
                                         <center>
                                             <img src="assets/bangun-datar/square.png" alt="" srcset="">
                                         </center>
                                         <p class="mt-2">Rumus Luas Persegi adalah : sisi x sisi</p>
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control"
+                                            <input type="number" class="form-control" id="slPersegi"
                                                 placeholder="Masukan Sisi">
                                             <button class="btn btn-primary" type="button"
-                                                id="button-addon2">Hitung</button>
+                                                onclick="lPersegi()">Hitung</button>
                                         </div>
+                                        <p id="lhPersegi"></p>
                                     </div>
-                                    <div class="col-6 text-center">
+                                    <div class="col-12 col-md-12 col-lg-6 text-center">
                                         <h3>Keliling Persegi</h3>
                                         <center>
                                             <img src="assets/bangun-datar/square.png" alt="" srcset="">
                                         </center>
                                         <p class="mt-2">Rumus keliling Persegi adalah : 4 x sisi</p>
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control input-rumus"
-                                                placeholder="Masukan Sisi">
+                                            <input type="number" class="form-control input-rumus"
+                                                placeholder="Masukan Sisi" id="skPersegi">
                                             <button class="btn btn-primary" type="button"
-                                                id="button-addon2">Hitung</button>
+                                                onclick="kPersegi()">Hitung</button>
                                         </div>
+                                        <p id="khPersegi"></p>
                                     </div>
                                 </div>
                             </div>
                             <!-- lingkaran -->
                             <div id="lingkaran" class="tabcontent">
                                 <div class="row">
-                                    <div class="col-6 text-center">
+                                    <div class="col-12 col-md-12 col-lg-6 text-center">
                                         <h3>Luas Lingkaran</h3>
                                         <center>
                                             <img src="assets/bangun-datar/circle.png" alt="" srcset="">
                                         </center>
-                                        <p class="mt-2">Rumus Luas Persegi adalah :  π × r × r</p>
+                                        <p class="mt-2">Rumus Luas Lingkaran adalah : π × r × r</p>
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control"
-                                                placeholder="Masukan Sisi">
+                                            <input type="number" class="form-control" placeholder="Masukan Jari-jari"
+                                                id="rlLingkaran">
                                             <button class="btn btn-primary" type="button"
-                                                id="button-addon2">Hitung</button>
+                                                onclick="lLingkaran()">Hitung</button>
                                         </div>
+                                        <p id="lhLingkaran"></p>
                                     </div>
-                                    <div class="col-6 text-center">
+                                    <div class="col-12 col-md-12 col-lg-6 text-center">
                                         <h3>Keliling Lingkaran</h3>
                                         <center>
                                             <img src="assets/bangun-datar/circle.png" alt="" srcset="">
                                         </center>
-                                        <p class="mt-2">Rumus keliling Persegi adalah : 2 x π x r</p>
+                                        <p class="mt-2">Rumus keliling Lingkaran adalah : 2 x π x r</p>
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control input-rumus"
-                                                placeholder="Masukan Sisi">
+                                            <input type="number" class="form-control input-rumus"
+                                                placeholder="Masukan Jari-jari" id="rkLingkaran">
                                             <button class="btn btn-primary" type="button"
-                                                id="button-addon2">Hitung</button>
+                                                onclick="kLingkaran()">Hitung</button>
                                         </div>
+                                        <p id="khLingkaran"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- segitiga -->
+                            <div id="Segitiga" class="tabcontent">
+                                <div class="row">
+                                    <div class="col-12 col-md-12 col-lg-6 text-center">
+                                        <h3>Luas Segitiga</h3>
+                                        <center>
+                                            <img src="assets/bangun-datar/triangle.png" alt="" srcset="">
+                                        </center>
+                                        <p class="mt-2">Rumus Luas Segitiga adalah : 1/2 x a x t</p>
+                                        <div class="input-group mb-3">
+                                            <input type="number" class="form-control" placeholder="Alas" id="lAlas">
+                                            <input type="number" class="form-control" placeholder="Tinggi" id="lTinggi">
+                                            <button class="btn btn-primary" type="button"
+                                                onclick="lSegitiga()">Hitung</button>
+                                        </div>
+                                        <p id="lhSegitiga"></p>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-6 text-center">
+                                        <h3>Keliling Segitiga</h3>
+                                        <center>
+                                            <img src="assets/bangun-datar/triangle.png" alt="" srcset="">
+                                        </center>
+                                        <p class="mt-2">Rumus keliling Segitiga adalah : s x s x s</p>
+                                        <div class="input-group mb-3">
+                                            <input type="number" class="form-control input-rumus" placeholder="Sisi 1"
+                                                id="skSegitiga1">
+                                            <input type="number" class="form-control input-rumus" placeholder="Sisi 2"
+                                                id="skSegitiga2">
+                                            <input type="number" class="form-control input-rumus" placeholder="Sisi 3"
+                                                id="skSegitiga3">
+                                            <button class="btn btn-primary" type="button"
+                                                onclick="kSegitiga()">Hitung</button>
+                                        </div>
+                                        <p id="khSegitiga"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Jajar Genjang -->
+                            <div id="jajar-genjang" class="tabcontent">
+                                <div class="row">
+                                    <div class="col-12 col-md-12 col-lg-6 text-center">
+                                        <h3>Luas Jajar Genjang</h3>
+                                        <center>
+                                            <img src="assets/bangun-datar/rhombus.png" alt="" srcset="">
+                                        </center>
+                                        <p class="mt-2">Rumus Luas Jajar Genjang adalah : a x t</p>
+                                        <div class="input-group mb-3">
+                                            <input type="number" class="form-control" placeholder="Alas" id="laJajar">
+                                            <input type="number" class="form-control" placeholder="Tinggi" id="ltJajar">
+                                            <button class="btn btn-primary" type="button"
+                                                onclick="lJajar()">Hitung</button>
+                                        </div>
+                                        <p id="lhJajar"></p>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-6 text-center">
+                                        <h3>Keliling Jajar Genjang</h3>
+                                        <center>
+                                            <img src="assets/bangun-datar/rhombus.png" alt="" srcset="">
+                                        </center>
+                                        <p class="mt-2">Rumus keliling Jajar Genjang adalah : 2 x (a + b)</p>
+                                        <div class="input-group mb-3">
+                                            <input type="number" class="form-control input-rumus" placeholder="Alas"
+                                                id="saJajar">
+                                            <input type="number" class="form-control input-rumus"
+                                                placeholder="Sisi Miring" id="ssJajar">
+                                            <button class="btn btn-primary" type="button"
+                                                onclick="kJajar()">Hitung</button>
+                                        </div>
+                                        <p id="khJajar"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- persegi panjang -->
+                            <div id="persegiPanjang" class="tabcontent">
+                                <div class="row">
+                                    <div class="col-12 col-md-12 col-lg-6 text-center">
+                                        <h3>Luas Persegi Panjang</h3>
+                                        <center>
+                                            <img src="assets/bangun-datar/persegipanjang.png" alt="" srcset="">
+                                        </center>
+                                        <p class="mt-2">Rumus Luas Persegi Panjang adalah : p x l</p>
+                                        <div class="input-group mb-3">
+                                            <input type="number" class="form-control" placeholder="Panjang"
+                                                id="plPanjang">
+                                            <input type="number" class="form-control" placeholder="Lebar"
+                                                id="pkPanjangr">
+                                            <button class="btn btn-primary" type="button"
+                                                onclick="lPanjang()">Hitung</button>
+                                        </div>
+                                        <p id="lhPanjang"></p>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-6 text-center">
+                                        <h3>Keliling Persegi Panjang</h3>
+                                        <center>
+                                            <img src="assets/bangun-datar/persegipanjang.png" alt="" srcset="">
+                                        </center>
+                                        <p class="mt-2">Rumus keliling Jajar Genjang adalah : 2 x (p + l)</p>
+                                        <div class="input-group mb-3">
+                                            <input type="number" class="form-control input-rumus" placeholder="Panjang"
+                                                id="pkPanjang">
+                                            <input type="number" class="form-control input-rumus" placeholder="Lebar"
+                                                id="lpPanjang">
+                                            <button class="btn btn-primary" type="button"
+                                                onclick="kPanjang()">Hitung</button>
+                                        </div>
+                                        <p id="khPanjang"></p>
                                     </div>
                                 </div>
                             </div>
@@ -163,14 +274,16 @@
         <footer class="">
             <div class="col-12">
                 <h3>© copyright by digimagas</h3>
+
             </div>
         </footer>
     </section>
-    <!-- end footer -->
-    <script src="script.js"></script>
 
-    <!-- php -->
-    
+    <!-- end footer -->
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="script.js"></script>
+    <script src="backend.js"></script>
+
 </body>
 
 </html>

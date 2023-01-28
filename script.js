@@ -11,3 +11,4 @@ function openMenu(evt, menuName) {
     document.getElementById(menuName).style.display = "block";
     evt.currentTarget.className += " active";
   }
+
