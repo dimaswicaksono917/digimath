@@ -330,11 +330,10 @@ a.navbar-brand{
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        margin-bottom: 30px;
     }
     .input-imt input{
-        display: flex !important;
-        justify-content: center !important;
-        width: 100% !important;
+        display: flex;
+        margin: 0 auto;
+            justify-content: center;
     }
 }

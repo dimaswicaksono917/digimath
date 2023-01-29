@@ -105,4 +105,5 @@ function hitungIMT() {
     console.log(bmi)
 
    document.getElementById("hasilIMT").innerHTML = hasil;
+   document.getElementById("ankaIMT").innerHTML = bmi;
 }
