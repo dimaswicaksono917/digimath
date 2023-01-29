@@ -16,9 +16,9 @@ function kPersegi() {
 function lLingkaran() {
     let jari = document.getElementById("rlLingkaran").value;
     const phi = 3.14
-    const luasLingkaran = phi * jari * jari;
-    // const luasLingkarans = Math.round(luasLingkaran);
-    document.getElementById("lhLingkaran").innerHTML = `Luas Lingkaran Adalah ${luasLingkaran} cm`;
+    let luasLingkaran = phi * jari * jari;
+    const luasLingkarans = luasLingkaran.toFixed(2);
+    document.getElementById("lhLingkaran").innerHTML = `Luas Lingkaran Adalah ${luasLingkarans} cm`;
 }
 
 // keliling Lingkaran
@@ -26,20 +26,20 @@ function kLingkaran() {
     let jari = document.getElementById("rkLingkaran").value;
     const phi = 3.14
     const kelilingLingkaran = 2 * phi * jari;
-    // const kelilingLingkarans = Math.round(kelilingLingkaran) ;
-    document.getElementById("khLingkaran").innerHTML = `Keliling Lingkaran Adalah ${kelilingLingkaran} cm`;
+    const kelilingLingkarans = kelilingLingkaran.toFixed(2);
+    document.getElementById("khLingkaran").innerHTML = `Keliling Lingkaran Adalah ${kelilingLingkarans} cm`;
 }
 
 // luas segitiga
-function lSegitiga(){
+function lSegitiga() {
     let alas = document.getElementById("lAlas").value;
     let tinggi = document.getElementById("lTinggi").value;
-    const luasSegitiga = 1/2 * alas * tinggi;
+    const luasSegitiga = 1 / 2 * alas * tinggi;
     document.getElementById("lhSegitiga").innerHTML = `Luas Segitiga Adalah ${luasSegitiga} cm`;
 }
 
 // keliling segitiga
-function kSegitiga(){
+function kSegitiga() {
     let sisi1 = document.getElementById("skSegitiga1").value;
     let sisi2 = document.getElementById("skSegitiga2").value;
     let sisi3 = document.getElementById("skSegitiga3").value;
@@ -48,7 +48,7 @@ function kSegitiga(){
 }
 
 // luas jajar genjang
-function lJajar(){
+function lJajar() {
     let alas = document.getElementById("laJajar").value;
     let tinggi = document.getElementById("ltJajar").value;
     const luasJajar = alas * tinggi;
@@ -56,18 +56,18 @@ function lJajar(){
 }
 
 // keliling jajar genjang
-function kJajar(){
+function kJajar() {
     let saJajar = document.getElementById("saJajar").value;
     let ssJajar = document.getElementById("ssJajar").value;
-    
+
     let saJajars = parseInt(saJajar);
-    let ssJajars = parseInt(ssJajar); 
+    let ssJajars = parseInt(ssJajar);
     const kelilingJajar = 2 * (saJajars + ssJajars);
     document.getElementById("khJajar").innerHTML = `Luas Jajar Genjang Adalah ${kelilingJajar} cm`;
 }
 
 // luas persegi panjang
-function lPanjang(){
+function lPanjang() {
     let panjang = document.getElementById("plPanjang").value;
     let lebar = document.getElementById("pkPanjangr").value;
     const luas = panjang * lebar;
@@ -75,9 +75,34 @@ function lPanjang(){
 }
 
 // keliling persegi panjang
-function kPanjang(){
+function kPanjang() {
     let panjang = document.getElementById("pkPanjang").value;
     let lebar = document.getElementById("lpPanjang").value;
     const keliling = 2 * (panjang * lebar);
     document.getElementById("khPanjang").innerHTML = `Keliling Persegi Panjang Adalah ${keliling} cm`;
+}
+
+// imt
+
+
+function hitungIMT() {
+    let tinggiBadan = document.getElementById("tinggiBadan").value;
+    let beratBadan = document.getElementById("beratBadan").value;
+    let bmi = (beratBadan / (tinggiBadan * tinggiBadan) * 10000).toFixed(1); 
+    let hasil
+
+    if (bmi < 17) {
+        hasil = 'Berat Badan kamu <strong>Sangat Kurus</strong>';
+    }else if (bmi >= 17.0 && bmi < 18.5) {
+        hasil = 'Berat Badan kamu <strong>Kurus</strong>';
+    }else if (bmi >= 18.5 && bmi < 25.0) {
+        hasil = 'Berat Badan kamu <strong>Normal</strong>';
+    }else if (bmi >= 25.0 && bmi < 27.0) {
+        hasil = 'Berat Badan Kamu <strong>Gemuk</strong>';
+    }else if (bmi >= 27.0) {
+        hasil = 'Berat Badan Kamu <strong>Obesitas</strong>';
+    }
+    console.log(bmi)
+
+   document.getElementById("hasilIMT").innerHTML = hasil;
 }
